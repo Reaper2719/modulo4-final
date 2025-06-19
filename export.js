@@ -1,23 +1,9 @@
-
 async function exportarDatos() {
   console.log("🔁 Ejecutando exportarDatos");
-  const request = indexedDB.open("modulo4DB", 1);
-
-  request.onupgradeneeded = function (event) {
-    const db = event.target.result;
-    if (!db.objectStoreNames.contains("registros")) {
-      db.createObjectStore("registros", { keyPath: "id", autoIncrement: true });
-    }
-  };
+  const request = indexedDB.open("registrosDB", 1);
 
   request.onsuccess = function (event) {
     const db = event.target.result;
-
-    if (!db.objectStoreNames.contains("registros")) {
-      alert("❌ Base de datos sin registros disponibles.");
-      return;
-    }
-
     const tx = db.transaction("registros", "readonly");
     const store = tx.objectStore("registros");
     const getAll = store.getAll();
