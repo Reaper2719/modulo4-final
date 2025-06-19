@@ -1,9 +1,8 @@
 {
   "name": "Modulo 4 - Observación Energética",
   "short_name": "Modulo4",
-  "start_url": "/",
+  "start_url": "./index.html",
   "display": "standalone",
-  "scope": "/",
   "background_color": "#ffffff",
   "theme_color": "#008751",
   "icons": [

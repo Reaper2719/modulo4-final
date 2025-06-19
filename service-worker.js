@@ -7,7 +7,6 @@ const FILES_TO_CACHE = [
   "indexedDB.js",
   "export.js",
   "manifest.json",
-  "favicon.ico",
   "icon-192.png",
   "icon-512.png"
 ];

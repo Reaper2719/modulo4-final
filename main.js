@@ -1,4 +1,3 @@
-console.log("✅ IndexedDB disponible:", "indexedDB" in window);
 window.onload = () => {
   console.log("✅ main.js cargado (window.onload)");
 
