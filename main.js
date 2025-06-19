@@ -1,3 +1,4 @@
+console.log("✅ IndexedDB disponible:", "indexedDB" in window);
 window.onload = () => {
   console.log("✅ main.js cargado (window.onload)");
 
@@ -49,3 +50,10 @@ window.onload = () => {
     });
   }
 };
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => console.log('✅ SW registrado:', reg.scope))
+      .catch(err => console.error('❌ Error registrando SW:', err));
+  });
+}
